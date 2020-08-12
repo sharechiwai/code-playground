@@ -1,0 +1,36 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "env": {
+    "browser": true,
+    "jest/globals": true,
+    "node": true
+  },
+  "extends": ["airbnb", "prettier", "plugin:jest/recommended", "react-app"],
+  "plugins": ["prettier", "jest"],
+  "rules": {
+    "linebreak-style": 0,
+    "jsx-quotes": 0,
+    "no-param-reassign": 0,
+    "no-shadow": 0,
+    "no-await-in-loop": 0,
+    "no-return-await": 0,
+    "no-throw-literal": 0,
+    "prefer-spread": 0,
+    "no-underscore-dangle": 0,
+    "import/no-dynamic-require": 0,
+    "no-extend-native": 0,
+    "max-len": 0,
+    "no-console": 0,
+    "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}],
+    "react/prefer-stateless-function": 0,
+    "react/no-unused-prop-types": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "no-useless-computed-key": 0,
+    "prefer-destructuring": 0,
+    "import/no-named-as-default": 0,
+    "react-hooks/exhaustive-deps": 0
+  }
+}
