@@ -14,7 +14,8 @@ import './App.css';
 import themeStyles from './utils/theme';
 
 const theme = createMuiTheme(themeStyles);
-function App() {
+
+const App = () => {
   return (
     <div className='App'>
       <MuiThemeProvider theme={theme}>
@@ -30,6 +31,6 @@ function App() {
       </MuiThemeProvider>
     </div>
   );
-}
+};
 
 export default App;
