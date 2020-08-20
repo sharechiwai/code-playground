@@ -27,7 +27,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "lint": "eslint src/",
-    "test-coverage": "SET CI=true && react-scripts test",
+    "test-coverage": "react-scripts test",
     "coverage": "yarn jest"
   },
   "browserslist": {
