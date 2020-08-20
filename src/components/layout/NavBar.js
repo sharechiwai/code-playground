@@ -40,13 +40,13 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
     display: 'block',
-    ['@media (min-width:780px)']: {
+    '@media (min-width:780px)': {
       display: 'none',
     },
   },
   menuItem: {
     display: 'none',
-    ['@media (min-width:780px)']: {
+    '@media (min-width:780px)': {
       display: 'block',
     },
   },
