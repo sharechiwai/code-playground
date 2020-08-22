@@ -18,7 +18,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "xml": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -28,7 +29,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "lint": "eslint src/",
-    "test-coverage": "react-scripts test",
+    "test-coverage": "react-scripts test --coverage --watchAll=false --coverageReporters=clover",
     "coverage": "yarn jest"
   },
   "browserslist": {
@@ -62,7 +63,8 @@
   "jest": {
     "coverageReporters": [
       "text",
-      "html"
+      "xml",
+      "clover"
     ],
     "coverageThreshold": {
       "global": {
