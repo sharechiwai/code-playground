@@ -31,6 +31,5 @@ yarn deploy
 ### run test and generate coverage report
 
 ```
-yarn test --coverage --testURL=http://localhost:3000/code-playground --covera
-geDirectory="./coverage" --watchAll=false
+yarn test --coverage --testURL=http://localhost:3000/code-playground --coverageDirectory="./coverage" --watchAll=false
 ```
