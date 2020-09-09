@@ -8,6 +8,7 @@ import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import NavBar from './components/layout/NavBar';
 import Home from './pages/home/Home';
 import Contact from './pages/home/Contact';
+import IPGeoInfo from './pages/ipgeoinfo/IPGeoInfo';
 
 // style
 import './App.css';
@@ -25,6 +26,7 @@ const App = () => {
             <Switch>
               <Route exact path='/' component={Home} />
               <Route exact path='/contact' component={Contact} />
+              <Route exact path='/ipgeoinfo' component={IPGeoInfo} />
             </Switch>
           </Container>
         </BrowserRouter>
