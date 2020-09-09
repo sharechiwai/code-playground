@@ -98,7 +98,10 @@ export default function Navbar() {
     setOpen(false);
   };
 
-  const navMenuItems = [{name: 'Contact', link: '/contact'}];
+  const navMenuItems = [
+    {name: 'Contact', link: '/contact'},
+    {name: 'IP', link: '/ipgeoinfo'},
+  ];
 
   return (
     <div className={classes.root}>
