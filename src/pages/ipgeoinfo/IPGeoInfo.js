@@ -29,7 +29,15 @@ const IPGeoInfo = () => {
       });
   }, []);
 
-  function sayHello() {
+  function openPopup(marker) {
+    if (marker && marker.leafletElement) {
+      window.setTimeout(() => {
+        marker.leafletElement.openPopup();
+      });
+    }
+  }
+
+  function getIpGeoInfo() {
     if (
       /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(
         ip,
@@ -63,7 +71,7 @@ const IPGeoInfo = () => {
           value={ip}
           onChange={(e) => setIP(e.target.value)}
         />
-        <Button variant='contained' color='primary' onClick={sayHello}>
+        <Button variant='contained' color='primary' onClick={getIpGeoInfo}>
           Search
         </Button>
       </form>
@@ -78,6 +86,7 @@ const IPGeoInfo = () => {
             onClick={() => {
               setActiveIPInfo(activeIPInfo);
             }}
+            ref={openPopup}
           >
             <Popup
               position={[activeIPInfo.lat, activeIPInfo.lon]}
