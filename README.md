@@ -37,3 +37,9 @@ yarn deploy
 ```
 yarn test --coverage --testURL=http://localhost:3000/code-playground --coverageDirectory="./coverage" --watchAll=false
 ```
+
+## Contribution
+
+Contribution are welcome, to help improve the code.  
+One of the part I would like to get help with is unit test and unit test code coverage.  
+Please create a new issue for any bug / suggestion and associate with that issue on you pull request. =)
