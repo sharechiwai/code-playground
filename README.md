@@ -43,3 +43,9 @@ yarn test --coverage --testURL=http://localhost:3000/code-playground --coverageD
 Contribution are welcome, to help improve the code.  
 One of the part I would like to get help with is unit test and unit test code coverage.  
 Please create a new issue for any bug / suggestion and associate with that issue on you pull request. =)
+
+## Meterian
+[![security status](https://www.meterian.io/badge/gh/sharechiwai/code-playground/security)](https://www.meterian.io/report/gh/sharechiwai/code-playground)
+
+[![stability status](https://www.meterian.io/badge/gh/sharechiwai/code-playground/stability)](https://www.meterian.io/report/gh/sharechiwai/code-playground)
+                
