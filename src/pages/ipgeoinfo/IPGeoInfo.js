@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react';
-import {Map, Marker, Popup, TileLayer} from 'react-leaflet';
-import {Button, InputLabel, TextField} from '@material-ui/core';
+import React, { useState, useEffect } from 'react';
+import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
+import { Button, InputLabel, TextField } from '@material-ui/core';
 
 const IPGeoInfo = () => {
   const [activeIPInfo, setActiveIPInfo] = useState(null);
@@ -9,22 +9,22 @@ const IPGeoInfo = () => {
   const [lng, setLng] = useState(114.177216);
 
   useEffect(() => {
-    fetch('https://api.ipify.org?format=json')
-      .then((res) => res.json())
-      .then((result) => {
+    fetch('https://powertoys.vercel.app/geoipservices/whatismyip')
+      .then(res => res.json())
+      .then(result => {
         const ip = result.ip;
         setIP(ip);
         fetch(`https://powertoys.vercel.app/geoipservices/${ip}`)
-          .then((res) => res.json())
+          .then(res => res.json())
           .then(
-            (result) => {
+            result => {
               setLat(result.lat);
               setLng(result.lon);
               setActiveIPInfo(result);
             },
-            (error) => {
+            error => {
               console.log(error);
-            },
+            }
           );
       });
   }, []);
@@ -40,20 +40,20 @@ const IPGeoInfo = () => {
   function getIpGeoInfo() {
     if (
       /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(
-        ip,
+        ip
       )
     ) {
       fetch(`https://powertoys.vercel.app/geoipservices/${ip}`)
-        .then((res) => res.json())
+        .then(res => res.json())
         .then(
-          (result) => {
+          result => {
             setLat(result.lat);
             setLng(result.lon);
             setActiveIPInfo(result);
           },
-          (error) => {
+          error => {
             console.log(error);
-          },
+          }
         );
     } else {
       alert('Please enter valid IP address');
@@ -69,7 +69,7 @@ const IPGeoInfo = () => {
           variant='outlined'
           color='secondary'
           value={ip}
-          onChange={(e) => setIP(e.target.value)}
+          onChange={e => setIP(e.target.value)}
         />
         <Button variant='contained' color='primary' onClick={getIpGeoInfo}>
           Search
